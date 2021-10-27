@@ -77,12 +77,18 @@ console.log(document.getElementsByClassName('thumb') );
 let next = document.querySelector('.next');
 let prev = document.querySelector('.prev');
 
-next.addEventListener('click', function(){
-    // avanzare su indice img successiva
-    
+next.addEventListener('click', function() {
+    if ( (imgActive) === (titleCollection.length) - 1) {
+        imgActive = 0;
+    } else {
+        imgActive++;
+    }
 
-    // definizione img attiva + reset su img attiva e attivazione img successiva
+    // reset active img and set active on next img
+    document.querySelector('.image-container.active').classList.remove('active');
+    document.getElementsByClassName('image-container')[imgActive].classList.add('active');
 
-
-    // definizione thumbnail
+    // reset active thumb and set active on next thumb
+    document.querySelector('.thumb.active').classList.remove('active');
+    document.getElementsByClassName('thumb')[imgActive].classList.add('active');
 })
