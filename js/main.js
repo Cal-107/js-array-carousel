@@ -92,3 +92,19 @@ next.addEventListener('click', function() {
     document.querySelector('.thumb.active').classList.remove('active');
     document.getElementsByClassName('thumb')[imgActive].classList.add('active');
 })
+
+prev.addEventListener('click', function() {
+    if (imgActive === 0) {
+        imgActive = 4
+     } else {
+        imgActive--;
+    }
+
+    // reset active img and set active on next img
+    document.querySelector('.image-container.active').classList.remove('active');
+    document.getElementsByClassName('image-container')[imgActive].classList.add('active');
+
+    // reset active thumb and set active on next thumb
+    document.querySelector('.thumb.active').classList.remove('active');
+    document.getElementsByClassName('thumb')[imgActive].classList.add('active');
+})
