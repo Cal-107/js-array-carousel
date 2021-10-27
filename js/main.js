@@ -47,6 +47,7 @@ const refThumb = document.querySelector('.thumbs');
 // indice img 
 let imgActive = 0;
 
+// injection html
 for (let i = 0; i < titleCollection.length; i++) {
 
     // images reference
@@ -68,10 +69,7 @@ for (let i = 0; i < titleCollection.length; i++) {
 
 // active action setup
 document.getElementsByClassName('image-container')[imgActive].classList.add('active');
-console.log(document.getElementsByClassName('image-container') );
-
 document.getElementsByClassName('thumb')[imgActive].classList.add('active');
-console.log(document.getElementsByClassName('thumb') );
 
 // click action
 let next = document.querySelector('.next');
