@@ -42,23 +42,47 @@ const textCollection = [
 
 // reference
 const refImg = document.querySelector('.images');
-const refThumb = document.querySelector('.thumbs')
+const refThumb = document.querySelector('.thumbs');
+
+// indice img 
+let imgActive = 0;
 
 for (let i = 0; i < titleCollection.length; i++) {
 
-    // image reference
+    // images reference
     refImg.innerHTML += `
-    <!-- <div class="image-container">
+    <div class="image-container">
         <img src="${imageCollection[i]}" alt="${titleCollection[i]}">
         <div class="text">
             <h3>${titleCollection[i]}</h3>
             <p>${textCollection[i]}</p>
         </div>
-    </div>`
+    </div>`;
 
-    // thumb reference
+    // thumbs reference
     refThumb.innerHTML += `
-    <!-- <div class="thumb">
+    <div class="thumb">
         <img src="${imageCollection[i]}" alt="${titleCollection[i]}">
-    </div> -`
+    </div>`;
 }
+
+// active action setup
+document.getElementsByClassName('image-container')[imgActive].classList.add('active');
+console.log(document.getElementsByClassName('image-container') );
+
+document.getElementsByClassName('thumb')[imgActive].classList.add('active');
+console.log(document.getElementsByClassName('thumb') );
+
+// click action
+let next = document.querySelector('.next');
+let prev = document.querySelector('.prev');
+
+next.addEventListener('click', function(){
+    // avanzare su indice img successiva
+    
+
+    // definizione img attiva + reset su img attiva e attivazione img successiva
+
+
+    // definizione thumbnail
+})
